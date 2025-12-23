@@ -1,4 +1,6 @@
-const API_URL = "http://localhost:3000/api/chat";
+
+// Sahi tareeka Vite ke liye:
+const API_URL = import.meta.env.VITE_API_URL || "http://localhost:3000/api/chat";
 
 export interface ChatResponse {
   reply: string;
