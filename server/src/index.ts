@@ -10,7 +10,10 @@ const app = express();
 const PORT = process.env.PORT || 3000;
 
 // Middleware
-app.use(cors()); // Frontend ko access dene ke liye
+app.use(cors({
+  origin: "*", // Star ka matlab: Kisi bhi website se request aane do (Vercel included)
+  methods: ["GET", "POST"]
+}));
 app.use(express.json()); // JSON data padhne ke liye
 
 // Routes
